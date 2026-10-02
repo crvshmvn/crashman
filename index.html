@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crashman – Tous mes liens</title>
+<meta name="description" content="Streamer sans spécialité. Retrouve Crashman sur Twitch, Twitter et Discord.">
+<meta property="og:title" content="Crashman – Tous mes liens">
+<meta property="og:description" content="Streamer sans spécialité. Hésite pas à lâcher ton follow 🧡">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14110E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟠</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14110E;
+    --cream: #F5EBDD;
+    --orange: #FF6A00;
+    --orange-deep: #C94F00;
+    --muted: #B9AC9A;
+    --hex: polygon(16px 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 16px 100%, 0 50%);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { min-height: 100%; }
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+    background-image:
+      radial-gradient(circle at 50% -10%, rgba(255,106,0,.28), transparent 55%);
+    background-repeat: no-repeat;
+  }
+  main {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 48px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Identity */
+  .avatar {
+    width: 120px;
+    height: 138px;
+    background: var(--orange);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    display: grid;
+    place-items: center;
+    font-family: "Chakra Petch", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: var(--ink);
+    animation: drop .7s cubic-bezier(.2,.9,.3,1.2) both;
+  }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+  @keyframes drop {
+    from { transform: translateY(-24px) scale(.9); opacity: 0; }
+    to   { transform: none; opacity: 1; }
+  }
+  h1 {
+    margin-top: 20px;
+    font-family: "Chakra Petch", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: .02em;
+    line-height: 1.1;
+  }
+  .tagline {
+    margin-top: 6px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* Links */
+  nav {
+    width: 100%;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 62px;
+    padding: 0 28px;
+    background: var(--cream);
+    color: var(--ink);
+    text-decoration: none;
+    clip-path: var(--hex);
+    font-family: "Chakra Petch", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color .15s, color .15s, transform .15s;
+  }
+  .link svg { width: 24px; height: 24px; flex: none; fill: currentColor; }
+  .link span { flex: 1; }
+  .link small {
+    font-family: "Barlow", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    opacity: .7;
+  }
+  .link.primary { background: var(--orange); }
+  .link:hover { background: var(--orange-deep); color: var(--cream); transform: translateY(-2px); }
+  .link:focus-visible { background: var(--ink); color: var(--orange); outline: none; box-shadow: inset 0 0 0 3px var(--orange); }
+  .link:active { transform: none; }
+
+  /* Dons */
+  .support {
+    width: 100%;
+    margin-top: 44px;
+    text-align: center;
+  }
+  .support h2 {
+    font-family: "Chakra Petch", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .support p {
+    margin: 6px 0 20px;
+    color: var(--muted);
+  }
+  .link svg.stroke { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+  .link.wave { background: #1DC8FF; }
+  .link.wave:hover { background: #12A3D1; color: var(--ink); }
+  .copy {
+    width: 100%;
+    min-height: 54px;
+    margin-top: 14px;
+    padding: 0 28px;
+    border: 0;
+    background: #2A241E;
+    color: var(--cream);
+    clip-path: var(--hex);
+    font-family: "Chakra Petch", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color .15s, color .15s;
+  }
+  .copy:hover { background: #3A322A; }
+  .copy:focus-visible { outline: none; box-shadow: inset 0 0 0 3px var(--orange); color: var(--orange); }
+
+  footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .avatar { animation: none; }
+    .link { transition: none; }
+    .link:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <!-- Pour mettre ta photo/logo : remplace la lettre C par <img src="logo.png" alt="Logo Crashman"> -->
+  <div class="avatar"><img src="logo.png" alt="Logo Crashman"></div>
+  <h1>Crashman</h1>
+  <p class="tagline">Streamer sans spécialité<br>Hésite pas à lâcher ton follow 🧡</p>
+
+  <nav aria-label="Mes réseaux">
+    <!-- Remplace chaque href="#" par ton vrai lien -->
+    <a class="link primary" href="https://twitch.tv/crvshmvn" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2 2.5 6v14H8v3h3l3-3h4l4.5-4.5V2H4zm16 12.5-3 3h-5l-3 3v-3H6V4h14v10.5zM17 7.5h-2v5h2v-5zm-5 0h-2v5h2v-5z"/></svg>
+      <span>Regarder sur Twitch</span>
+    </a>
+    <a class="link" href="https://x.com/crvshmvn" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <span>Me suivre sur Twitter</span>
+    </a>
+    <a class="link" href="https://discord.gg/crvshmvn" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.4C.6 9 -.3 13.5.1 18a20 20 0 0 0 6 3l1.3-2.1c-.7-.3-1.4-.6-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.300.7-2 1l1.300 2.100a20 20 0 0 0 6-3c.5-5.200-.8-9.700-3.600-13.600zM8.400 15.300c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400zm7.200 0c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400z"/></svg>
+      <span>Rejoindre le Discord</span>
+    </a>
+    <!-- Autres liens possibles : copie un bloc <a class="link"> et change le texte et le lien -->
+  </nav>
+
+  <section class="support" aria-labelledby="support-title">
+    <h2 id="support-title">Soutenir la chaîne</h2>
+    <p>Un don, même petit, aide à financer le matériel et les lives. Merci !</p>
+    <!-- Remplace par ton lien de paiement Wave (compte marchand) -->
+    <a class="link wave" href="https://pay.wave.com/m/M_ci_62EEBRY-jeR0/c/ci/" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2c-3 0-5 2.400-5 6 0 1.200.3 2.200.8 3.100C5.700 12.600 5 14.600 5 17c0 3 1.500 5 3 5h8c1.500 0 3-2 3-5 0-2.400-.700-4.400-2.800-5.900.5-.9.8-1.900.8-3.100 0-3.600-2-6-5-6zM12 11c-2 0-3.500 2-3.500 5s1.500 5 3.500 5 3.500-2 3.500-5-1.500-5-3.500-5zM10 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM14 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM12 7.500l-1.200 1.300h2.400z"/></svg>
+      <span>Faire un don avec Wave</span>
+    </a>
+  </section>
+
+  <footer>© Crashman Squad</footer>
+</main>
+
+</body>
+</html>
